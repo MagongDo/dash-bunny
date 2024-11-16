@@ -1,0 +1,28 @@
+package com.devcourse.dashbunny.feature.notice.dto;
+
+import com.devcourse.dashbunny.domain.admin.Notice;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+
+import java.time.LocalDateTime;
+
+@Getter
+@NoArgsConstructor
+public class NoticeView {
+    private Long noticeId;
+    private String noticeTitle;
+    private String noticeContent;
+    private LocalDateTime createdDate;
+    private String target;
+    private Long viewCount;
+
+    public NoticeView(Notice notice) {
+        noticeId=notice.getNoticeId();
+        noticeTitle=notice.getNoticeTitle();
+        noticeContent=notice.getNoticeContent();
+        createdDate=notice.getCreatedDate();
+        target=notice.getTarget();
+        viewCount=notice.getViewCount();
+    }
+
+}
