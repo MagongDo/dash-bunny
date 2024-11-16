@@ -17,7 +17,7 @@ public class TSIDListener {
 
         try {
             // 엔티티 클래스의 모든 필드를 가져옴
-            Field[] fields = this.getClass().getDeclaredFields();
+            Field[] fields = entity.getClass().getDeclaredFields();
             for (Field field : fields) {
                 //가져온 필드 중 TSID 어노테이션이 불으며 타입이 String인 경우를 필터링
                 if (field.isAnnotationPresent(TSID.class) && field.getType().equals(String.class)) {
