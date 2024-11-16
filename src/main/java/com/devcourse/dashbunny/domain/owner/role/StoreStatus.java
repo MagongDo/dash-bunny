@@ -1,4 +1,4 @@
-package com.devcourse.dashbunny.domain.owner;
+package com.devcourse.dashbunny.domain.owner.role;
 
 public enum StoreStatus {
         PENDING,    // 등록 대기 중
