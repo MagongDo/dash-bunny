@@ -59,16 +59,3 @@ public class OwnerCoupon {
     private BigInteger maximumDiscount;
 
 }
-
-// 쿠폰 승인 상태를 정의하는 열거형
-enum CouponStatus1 {
-    PENDING, // 대기 중
-    ONGOING, // 진행 중
-
-}
-
-// 할인 방식을 정의하는 열거형
-enum DiscountType1 {
-    FIXED,   // 정액 할인
-    PERCENT  // 정률 할인
-}

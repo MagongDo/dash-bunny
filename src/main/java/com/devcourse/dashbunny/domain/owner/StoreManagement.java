@@ -103,15 +103,3 @@ public class StoreManagement {
     private List<OwnerCoupon> couponList = new ArrayList<>();
     // Getters and Setters -> 롬복 사용
 }
-
-// 가게 상태를 나타내는 ENUM -> 이넘 클래스를 따로 만들까요? 아니면 확인이 이게 더 편하신지요?
-enum StoreStatus1 {
-    PENDING,    // 등록 대기 중
-    REGISTERED,  // 등록 완료
-    REGISTRATION, // 가게 등록 실패
-    OPEN, // 영업중
-    PENDING_OPEN, // 영업 준비 중
-    TEMP_CLOSE, // 휴업중
-    CLOSURE_PENDING, // 페업 신청 대기 중
-    CLOSED // 폐업
-}
