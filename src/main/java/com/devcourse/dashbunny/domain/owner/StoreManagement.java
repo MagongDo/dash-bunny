@@ -82,15 +82,15 @@ public class StoreManagement {
     private Integer maxDeliveryTime;
 
     // 평점 (소수점 1자리까지, 예: 4.5)
-    @Column(nullable = false, precision = 2, scale = 1)
+    @Column(nullable = true, precision = 2, scale = 1)
     private BigDecimal rating;
 
     // 찜한 횟수
-    @Column(nullable = false)
+    @Column(nullable = true)
     private int dibsCount;
 
     // 리뷰 수
-    @Column(nullable = false)
+    @Column(nullable = true)
     private int reviewCount;
 
     // 쇼츠 링크 (필요시 필드명 수정)
