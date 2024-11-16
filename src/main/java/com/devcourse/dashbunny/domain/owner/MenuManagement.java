@@ -1,4 +1,4 @@
-package entity;
+package com.devcourse.dashbunny.domain.owner;
 
 import jakarta.persistence.*;
 
@@ -14,11 +14,12 @@ public class MenuManagement {
 
     // 가게 고유키 (필수)
     @Column(nullable = false)
-    private Long storeId;
+    private String storeId;
 
     // 그룹 고유키 (MenuGroup과 연관 관계 설정)
-    @ManyToOne
-    @JoinColumn(name = "groupId", nullable = false)
+    // 그룹이 없어도 메뉴는 존재할 수 있다.
+    @ManyToOne(optional = true)
+    @JoinColumn(name = "group_id", nullable = true)
     private MenuGroup menuGroup;
 
     // 메뉴 이름 (필수, 최대 길이 255자)

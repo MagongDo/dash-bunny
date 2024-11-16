@@ -1,4 +1,4 @@
-package entity;
+package com.devcourse.dashbunny.domain.owner;
 
 import jakarta.persistence.*;
 import java.util.List;

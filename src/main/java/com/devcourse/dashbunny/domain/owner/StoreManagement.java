@@ -1,11 +1,14 @@
 package com.devcourse.dashbunny.domain.owner;
 
 import com.devcourse.annotation.TSID;
+import com.devcourse.dashbunny.domain.owner.role.StoreStatus;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
 
 import java.math.BigDecimal;
+import java.util.ArrayList;
+import java.util.List;
 
 // 가게 관리 및 가게 정보를 저장하는 엔티티 클래스
 @Setter
@@ -94,6 +97,10 @@ public class StoreManagement {
     @Column
     private String shortsUrl;
 
+    //스토어가 가진 쿠폰 리스트
+    //쿠폰이 없어도 스토어는 생성될 수 있어야한다. 리스트 초기화 진행
+    @OneToMany(mappedBy = "storeManagement",cascade = CascadeType.ALL, orphanRemoval = true)
+    private List<OwnerCoupon> couponList = new ArrayList<>();
     // Getters and Setters -> 롬복 사용
 }
 

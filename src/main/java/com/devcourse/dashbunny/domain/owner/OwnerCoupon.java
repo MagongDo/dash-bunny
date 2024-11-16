@@ -1,5 +1,7 @@
-package entity;
+package com.devcourse.dashbunny.domain.owner;
 
+import com.devcourse.dashbunny.domain.owner.role.CouponStatus;
+import com.devcourse.dashbunny.domain.owner.role.DiscountType;
 import jakarta.persistence.*;
 import java.math.BigDecimal;
 import java.math.BigInteger;
@@ -15,9 +17,16 @@ public class OwnerCoupon {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long couponId;
 
-    // 가게 ID (필수)
-    @Column(nullable = false)
-    private Long storeId;
+    //단순 id 참조에서 객체 중심으로 변경해 보았는데 어떤 방식이 더 좋으신가요?
+  /*  // 가게 ID (필수)
+    @Column(nullable = true)
+    private String storeId;*/
+
+    //
+    // 스토어 없이 쿠폰은 생성이 불가능하다.
+    @ManyToOne
+    @JoinColumn(name = "store_id", nullable = false)
+    private StoreManagement storeManagement;
 
     // 쿠폰 승인 상태 (열거형, 필수)
     @Enumerated(EnumType.STRING)
@@ -52,14 +61,14 @@ public class OwnerCoupon {
 }
 
 // 쿠폰 승인 상태를 정의하는 열거형
-enum CouponStatus {
+enum CouponStatus1 {
     PENDING, // 대기 중
     ONGOING, // 진행 중
 
 }
 
 // 할인 방식을 정의하는 열거형
-enum DiscountType {
+enum DiscountType1 {
     FIXED,   // 정액 할인
     PERCENT  // 정률 할인
 }
