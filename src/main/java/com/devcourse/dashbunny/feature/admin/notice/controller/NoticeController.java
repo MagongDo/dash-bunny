@@ -1,11 +1,11 @@
-package com.devcourse.dashbunny.feature.notice.controller;
+package com.devcourse.dashbunny.feature.admin.notice.controller;
 
 import com.devcourse.dashbunny.domain.admin.Notice;
-import com.devcourse.dashbunny.feature.notice.dto.AddNotice;
-import com.devcourse.dashbunny.feature.notice.dto.NoticeListView;
-import com.devcourse.dashbunny.feature.notice.dto.NoticeView;
-import com.devcourse.dashbunny.feature.notice.dto.UpdateNotice;
-import com.devcourse.dashbunny.feature.notice.service.NoticeService;
+import com.devcourse.dashbunny.feature.admin.notice.dto.AddNotice;
+import com.devcourse.dashbunny.feature.admin.notice.dto.NoticeListView;
+import com.devcourse.dashbunny.feature.admin.notice.dto.NoticeView;
+import com.devcourse.dashbunny.feature.admin.notice.dto.UpdateNotice;
+import com.devcourse.dashbunny.feature.admin.notice.service.NoticeService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

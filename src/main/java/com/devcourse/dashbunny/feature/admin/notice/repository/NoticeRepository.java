@@ -1,4 +1,4 @@
-package com.devcourse.dashbunny.feature.notice.repository;
+package com.devcourse.dashbunny.feature.admin.notice.repository;
 
 import com.devcourse.dashbunny.domain.admin.Notice;
 import com.devcourse.dashbunny.domain.admin.NoticeTarget;

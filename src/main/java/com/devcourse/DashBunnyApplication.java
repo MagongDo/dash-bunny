@@ -11,8 +11,8 @@ public class DashBunnyApplication {
 
     public static void main(String[] args) {
         SpringApplication app = new SpringApplication(DashBunnyApplication.class);
-        app.setAdditionalProfiles("Dev");
-        app.run(args);
+        //app.setAdditionalProfiles("Dev");
+        //app.run(args);
     }
 
 }

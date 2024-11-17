@@ -1,4 +1,4 @@
-package com.devcourse.dashbunny.feature.notice.dto;
+package com.devcourse.dashbunny.feature.admin.notice.dto;
 
 import com.devcourse.dashbunny.domain.admin.NoticeTarget;
 import lombok.AllArgsConstructor;
