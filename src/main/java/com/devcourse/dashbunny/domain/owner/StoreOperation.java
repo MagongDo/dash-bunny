@@ -33,19 +33,18 @@ public class StoreOperation {
     @Column(columnDefinition="TEXT")
     public String holidayNotice;
 
-    //일시 중지 상태
+    //일시 중지 상태(불리안)
     private boolean isPaused = false;
 
-    //일시 중지 유지 시간
-    // 고민점 영업 시간처럼 한번에 받을 것인가?
+    //일시 중지 유지 시간(시작시간 & 종료시간)
+    // 고민점 영업 시간처럼 한번에 받을 것인가? 흐음,,?!? 좋습니다!! 이거에 맞게 ERD 수정했습니다!
     private String pauseStartTime;
-
     private String pauseEndTime;
-/*
-    // 포장 여부
+
+    // 포장 주문 여부 *호정님 여기를 살렸습니다!!
     @Column(nullable = false)
     private boolean isTakeout = true;
-*/
+
     //사장님이 입력하는 배달 가능 지역
     private String deliveryArea;
 

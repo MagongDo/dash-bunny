@@ -27,6 +27,11 @@ public class StoreManagement {
     @Column(nullable = false, length = 255)
     private String storeName;
 
+    // 가게 상태 (ENUM 타입, 기본값: PENDING)
+    @Enumerated(EnumType.STRING)
+    @Column(nullable = false)
+    private StoreStatus storeStatus = StoreStatus.PENDING;
+
     // 가게 소개 내용 (TEXT 타입)
     @Column(columnDefinition = "TEXT")
     private String description;
@@ -35,20 +40,20 @@ public class StoreManagement {
     @Column(nullable = false, length = 13)
     private String contactNumber;
 
-    // 가게 위치 (주소, 위도와 경도)
-    // 1.주소 (필수, 최대 길이 255자)
+    // 가게 매장 로고 (아직 작성안한 필드)
+    // 가게 배너 이미지 (아직 작성안한 필드)
+
+
+    // 1.가게 주소 (필수, 최대 길이 255자)
     @Column(nullable = false, length = 255)
     private String address;
 
-    // 2.위도와 경도 (필수, JSON 형태로 저장)
+    // 2.가게 위치 [위도와 경도 (필수, JSON 형태로 저장)]
     @Column(columnDefinition = "JSON", nullable = false)
     private String location;
 
-    // 가게 상태 (ENUM 타입, 기본값: PENDING)
-    @Enumerated(EnumType.STRING)
-    @Column(nullable = false)
-    private StoreStatus storeStatus = StoreStatus.PENDING;
 
+// [대표 카테고리 및 일반 카테고리 등]
     // 카테고리 1
     @Column
     private String category1;
@@ -64,11 +69,6 @@ public class StoreManagement {
     // 가게 등록 서류 (필수, 최대 길이 255자)
     @Column(nullable = false, length = 255)
     private String storeRegistrationDocs;
-
-/*
-    // 포장 여부
-    @Column(nullable = false)
-    private boolean isTakeout = true;*/
 
     // 평점 (소수점 1자리까지, 예: 4.5)
     @Column(nullable = true, precision = 2, scale = 1)
