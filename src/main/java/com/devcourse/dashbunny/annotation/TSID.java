@@ -1,4 +1,4 @@
-package com.devcourse.annotation;
+package com.devcourse.dashbunny.annotation;
 
 import java.lang.annotation.*;
 

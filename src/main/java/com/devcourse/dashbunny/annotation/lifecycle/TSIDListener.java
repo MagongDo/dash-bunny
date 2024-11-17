@@ -1,7 +1,7 @@
-package com.devcourse.lifecycle;
+package com.devcourse.dashbunny.annotation.lifecycle;
 
 
-import com.devcourse.annotation.TSID;
+import com.devcourse.dashbunny.annotation.TSID;
 import jakarta.persistence.PrePersist;
 import lombok.extern.slf4j.Slf4j;
 
