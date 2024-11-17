@@ -65,24 +65,10 @@ public class StoreManagement {
     @Column(nullable = false, length = 255)
     private String storeRegistrationDocs;
 
-/*    // 매출 금액 (소수점 2자리까지)
-    @Column(precision = 19, scale = 2)
-    private BigDecimal money;*/
-
 /*
     // 포장 여부
     @Column(nullable = false)
     private boolean isTakeout = true;*/
-
-/*
-    // 최소 배달 예상 시간 (단위: 분)
-    @Column
-    private Integer minDeliveryTime;
-
-    // 최대 배달 예상 시간 (단위: 분)
-    @Column
-    private Integer maxDeliveryTime;
-*/
 
     // 평점 (소수점 1자리까지, 예: 4.5)
     @Column(nullable = true, precision = 2, scale = 1)

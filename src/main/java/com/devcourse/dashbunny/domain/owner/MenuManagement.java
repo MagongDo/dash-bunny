@@ -34,6 +34,10 @@ public class MenuManagement {
     @Column(columnDefinition = "TEXT")
     private String menuContent;
 
+    //상품 금액
+    @Column(nullable = false)
+    private Long price;
+
     // 메뉴 사진 (파일 경로나 URL, 최대 길이 255자)
     @Column(length = 255)
     private String menuImage;
@@ -43,7 +47,10 @@ public class MenuManagement {
     private boolean stockAvailable;
 
     // 메뉴 재고 수량
-    @Column
     private Integer menuStock;
+
+    //품절 여부
+    @Column(nullable = false)
+    private Boolean isSoldOut = false;
 
 }
