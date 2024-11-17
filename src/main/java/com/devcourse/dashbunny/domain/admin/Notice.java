@@ -32,14 +32,16 @@ public class Notice {
     @LastModifiedDate
     private LocalDateTime updatedDate;
 
-    private String target; //권한
+    @Enumerated(EnumType.STRING)
+    private NoticeTarget target; //대상
 
     private Long viewCount;
 
 
     public void changeNoticeTitle(String noticeTitle) {this.noticeTitle = noticeTitle;}
     public void changeNoticeContent(String noticeContent) {this.noticeContent = noticeContent;}
-    public void changeTarget(String target) {this.target = target;}
+    public void changeTarget(NoticeTarget target) {this.target = target;}
     public void isIncrementViewCount() {this.viewCount++;}
+
 
 }

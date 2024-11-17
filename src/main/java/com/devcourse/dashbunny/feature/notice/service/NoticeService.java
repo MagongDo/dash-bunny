@@ -1,6 +1,7 @@
 package com.devcourse.dashbunny.feature.notice.service;
 
 import com.devcourse.dashbunny.domain.admin.Notice;
+import com.devcourse.dashbunny.domain.admin.NoticeTarget;
 import com.devcourse.dashbunny.feature.notice.dto.AddNotice;
 import com.devcourse.dashbunny.feature.notice.dto.NoticeListView;
 import com.devcourse.dashbunny.feature.notice.dto.NoticeView;
@@ -23,9 +24,17 @@ public class NoticeService {
         return savedNotice;
     }
 
-    //공지사항 목록 조회
+    //공지사항 목록 조회- 관리자
     public List<NoticeListView> getAllNotices() {
         List<Notice> notices=noticeRepository.findAll();
+        return notices.stream()
+                .map(NoticeListView::new)
+                .toList();
+    }
+
+    //공지사항 목록 조회- 사장님,사용자
+    public List<NoticeListView> getAllNoticesByRole(String role) {
+        List<Notice> notices=noticeRepository.findByTarget(NoticeTarget.valueOf(role));
         return notices.stream()
                 .map(NoticeListView::new)
                 .toList();
@@ -49,7 +58,7 @@ public class NoticeService {
     @Transactional
     public UpdateNotice updateNotice(Long noticeId, AddNotice request) {
         Notice updatednotice=noticeRepository.findById(noticeId)
-                .orElseThrow(()->new IllegalArgumentException("not found notcieId: "+noticeId));
+                .orElseThrow(()->new IllegalArgumentException("not found noticeId: "+noticeId));
 
         updatednotice.changeNoticeTitle(request.getNoticeTitle());
         updatednotice.changeNoticeContent(request.getNoticeContent());

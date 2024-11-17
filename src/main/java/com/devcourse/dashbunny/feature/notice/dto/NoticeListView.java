@@ -1,6 +1,7 @@
 package com.devcourse.dashbunny.feature.notice.dto;
 
 import com.devcourse.dashbunny.domain.admin.Notice;
+import com.devcourse.dashbunny.domain.admin.NoticeTarget;
 import lombok.Getter;
 
 import java.time.LocalDateTime;
@@ -10,7 +11,7 @@ public class NoticeListView {
     private Long noticeId;
     private String noticeTitle;
     private LocalDateTime createdDate;
-    private String target;
+    private NoticeTarget target;
     private Long viewCount;
 
     public NoticeListView(Notice notice) {
