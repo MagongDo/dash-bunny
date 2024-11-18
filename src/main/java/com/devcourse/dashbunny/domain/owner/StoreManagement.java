@@ -1,6 +1,6 @@
 package com.devcourse.dashbunny.domain.owner;
 
-import com.devcourse.annotation.TSID;
+import com.devcourse.dashbunny.annotation.TSID;
 import com.devcourse.dashbunny.domain.owner.role.StoreStatus;
 import jakarta.persistence.*;
 import lombok.Getter;
@@ -65,14 +65,16 @@ public class StoreManagement {
     @Column(nullable = false, length = 255)
     private String storeRegistrationDocs;
 
-    // 매출 금액 (소수점 2자리까지)
+/*    // 매출 금액 (소수점 2자리까지)
     @Column(precision = 19, scale = 2)
-    private BigDecimal money;
+    private BigDecimal money;*/
 
-    // 포장 여부 (0 또는 1로 표현)
+/*
+    // 포장 여부
     @Column(nullable = false)
-    private int type;
+    private boolean isTakeout = true;*/
 
+/*
     // 최소 배달 예상 시간 (단위: 분)
     @Column
     private Integer minDeliveryTime;
@@ -80,17 +82,18 @@ public class StoreManagement {
     // 최대 배달 예상 시간 (단위: 분)
     @Column
     private Integer maxDeliveryTime;
+*/
 
     // 평점 (소수점 1자리까지, 예: 4.5)
-    @Column(nullable = false, precision = 2, scale = 1)
+    @Column(nullable = true, precision = 2, scale = 1)
     private BigDecimal rating;
 
     // 찜한 횟수
-    @Column(nullable = false)
+    @Column(nullable = true)
     private int dibsCount;
 
     // 리뷰 수
-    @Column(nullable = false)
+    @Column(nullable = true)
     private int reviewCount;
 
     // 쇼츠 링크 (필요시 필드명 수정)

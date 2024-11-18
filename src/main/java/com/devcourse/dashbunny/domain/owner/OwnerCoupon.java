@@ -3,11 +3,16 @@ package com.devcourse.dashbunny.domain.owner;
 import com.devcourse.dashbunny.domain.owner.role.CouponStatus;
 import com.devcourse.dashbunny.domain.owner.role.DiscountType;
 import jakarta.persistence.*;
+import lombok.Getter;
+import lombok.Setter;
+
 import java.math.BigDecimal;
 import java.math.BigInteger;
 import java.time.LocalDate;
 
 // 사장님 쿠폰 정보를 관리하는 엔티티 클래스
+@Getter
+@Setter
 @Entity
 @Table(name = "owner_coupon")
 public class OwnerCoupon {

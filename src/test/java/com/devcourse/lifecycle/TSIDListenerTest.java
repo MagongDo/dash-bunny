@@ -1,6 +1,7 @@
 package com.devcourse.lifecycle;
 
-import com.devcourse.annotation.TSID;
+import com.devcourse.dashbunny.annotation.TSID;
+import com.devcourse.dashbunny.annotation.lifecycle.TSIDListener;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 

@@ -1,8 +1,12 @@
 package com.devcourse.dashbunny.domain.owner;
 
 import jakarta.persistence.*;
+import lombok.Getter;
+import lombok.Setter;
 
 // 메뉴 정보를 관리하는 엔티티 클래스
+@Getter
+@Setter
 @Entity
 @Table(name = "menu_management")
 public class MenuManagement {
