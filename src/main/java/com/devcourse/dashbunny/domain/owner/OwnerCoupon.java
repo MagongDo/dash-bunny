@@ -23,11 +23,12 @@ public class OwnerCoupon {
     private Long couponId;
 
     //단순 id 참조에서 객체 중심으로 변경해 보았는데 어떤 방식이 더 좋으신가요?
+    // 강민 : 와 이걸 이제 이해했습니다,,객체 중심이 더 좋은거 같습니다!!
   /*  // 가게 ID (필수)
     @Column(nullable = true)
     private String storeId;*/
 
-    //
+
     // 스토어 없이 쿠폰은 생성이 불가능하다.
     @ManyToOne
     @JoinColumn(name = "store_id", nullable = false)
