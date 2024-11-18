@@ -10,7 +10,8 @@ import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 public class DashBunnyApplication {
 
     public static void main(String[] args) {
-        SpringApplication app = new SpringApplication(DashBunnyApplication.class);
+        SpringApplication.run(DashBunnyApplication.class, args);
+        //SpringApplication app = new SpringApplication(DashBunnyApplication.class);
         //app.setAdditionalProfiles("Dev");
         //app.run(args);
     }

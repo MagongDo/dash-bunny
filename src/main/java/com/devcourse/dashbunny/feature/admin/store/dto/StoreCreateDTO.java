@@ -1,9 +1,9 @@
-package com.devcourse.dashbunny.domain.owner.dto;
+package com.devcourse.dashbunny.feature.admin.store.dto;
 
 import com.devcourse.dashbunny.domain.owner.StoreManagement;
 import com.devcourse.dashbunny.domain.owner.role.StoreStatus;
 
-public record StoreCreatDTO(
+public record StoreCreateDTO(
         String storeName,          // 가게 이름
         String contactNumber,      // 가게 연락처
         String address,            // 가게 위치
